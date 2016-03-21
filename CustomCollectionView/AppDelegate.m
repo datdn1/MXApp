@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "MangXanhAPI.h"
+#import "MainViewController.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +16,25 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:12.0/255.0 green:155.0/255.0 blue:73.0/255.0 alpha:1.0]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UITabBar appearance] setTintColor:[UIColor colorWithRed:240.0/255.0 green:124.0/255.0 blue:42.0/255.0 alpha:1.0]];
+    
+    // get token id when launch application
+    MangXanhAPI *clientAPI = [MangXanhAPI shareAPIClient];
+    [clientAPI getTokenIdWithDeviceId:nil completionBlock:^(NSString *tokenId, NSError *error) {
+        if (error)
+        {
+            // if device don't get tokend id?
+            NSLog(@"Get token id faild with error: %@", error.localizedDescription);
+            return;
+        }
+        else
+        {
+            clientAPI.tokenId = tokenId;
+        }
+    }];
     return YES;
 }
 

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryCell">
+            <connections>
+                <outlet property="image" destination="Mff-GT-nmA" id="16r-TR-eTZ"/>
+                <outlet property="title" destination="DT6-b6-tfb" id="Lae-gG-3IN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="Ivg-fu-v5W" customClass="CategoryCell">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thời trang" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DT6-b6-tfb">
+                        <rect key="frame" x="0.0" y="69" width="80" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mff-GT-nmA">
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="68"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="68" id="UIw-1c-An4"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="DT6-b6-tfb" secondAttribute="trailing" id="0fB-4u-zOc"/>
+                <constraint firstItem="Mff-GT-nmA" firstAttribute="leading" secondItem="Ivg-fu-v5W" secondAttribute="leading" id="F9R-LZ-nCp"/>
+                <constraint firstAttribute="bottom" secondItem="DT6-b6-tfb" secondAttribute="bottom" id="Fg6-wV-vRM"/>
+                <constraint firstItem="Mff-GT-nmA" firstAttribute="top" secondItem="Ivg-fu-v5W" secondAttribute="top" id="QQg-Gq-vcc"/>
+                <constraint firstItem="DT6-b6-tfb" firstAttribute="top" secondItem="Mff-GT-nmA" secondAttribute="bottom" constant="1" id="avE-cU-QrD"/>
+                <constraint firstAttribute="trailing" secondItem="Mff-GT-nmA" secondAttribute="trailing" id="bLT-a9-pSR"/>
+                <constraint firstItem="DT6-b6-tfb" firstAttribute="leading" secondItem="Ivg-fu-v5W" secondAttribute="leading" id="gRB-9G-u7K"/>
+            </constraints>
+            <size key="customSize" width="132" height="137"/>
+            <point key="canvasLocation" x="656" y="-66"/>
+        </collectionViewCell>
+    </objects>
+</document>
